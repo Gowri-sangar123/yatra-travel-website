@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
-import { faqs } from '../data/faq';
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { faqs } from "../data/faq";
 
 export default function FAQSection() {
   const [openId, setOpenId] = useState(null);
@@ -16,9 +16,7 @@ export default function FAQSection() {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-600">
-            Find answers to common questions about our Tempo Traveller rentals
-          </p>
+          <p className="text-xl text-gray-600">Tempo Traveller in Chennai</p>
         </div>
 
         <div className="space-y-4">
@@ -37,16 +35,14 @@ export default function FAQSection() {
                 <ChevronDown
                   size={24}
                   className={`text-blue-600 flex-shrink-0 transition-transform ${
-                    openId === faq.id ? 'transform rotate-180' : ''
+                    openId === faq.id ? "transform rotate-180" : ""
                   }`}
                 />
               </button>
 
               {openId === faq.id && (
                 <div className="px-6 py-4 bg-blue-50 border-t border-gray-200">
-                  <p className="text-gray-700 leading-relaxed">
-                    {faq.answer}
-                  </p>
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
