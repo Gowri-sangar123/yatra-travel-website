@@ -1,4 +1,4 @@
-import { Phone, MessageCircle } from 'lucide-react';
+import { Phone, MessageCircle } from "lucide-react";
 
 export default function CTABanner() {
   return (
@@ -11,19 +11,28 @@ export default function CTABanner() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-          Ready to Book Your Journey?
+          Book with Yatra Travel India
         </h2>
-        <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-          Choose from our wide range of Tempo Travellers and create unforgettable memories with your loved ones
+
+        <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto leading-relaxed">
+          If you are looking for a reliable travel partner, book your 12-seater
+          luxury tempo traveller in Chennai with Yatra Travel India and enjoy:
+          <br />
+          <br />
+          ● Clean and well-maintained vehicles <br />
+          ● Experienced drivers with excellent route knowledge <br />
+          ● Transparent pricing with no hidden charges <br />● Quick and
+          hassle-free booking process
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <a
-            href="tel:+919876543210"
+            href="https://www.yatratravelindia.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 bg-white hover:bg-gray-100 text-blue-600 px-8 py-4 rounded-lg font-bold text-lg transition-colors"
           >
-            <Phone size={24} />
-            Call Now
+            Book Now
           </a>
           <a
             href="https://wa.me/919876543210"
