@@ -1,36 +1,37 @@
-import { useState } from 'react';
-import { MapPin, Calendar, Users, Search } from 'lucide-react';
+import { useState } from "react";
+import { MapPin, Calendar, Users, Search } from "lucide-react";
 
 export default function Hero() {
   const [formData, setFormData] = useState({
-    pickup: '',
-    dropoff: '',
-    date: '',
-    travelers: '4'
+    pickup: "",
+    dropoff: "",
+    date: "",
+    travelers: "4",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log('Search initiated:', formData);
+    console.log("Search initiated:", formData);
   };
 
   return (
     <div className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white overflow-hidden">
       {/* Background Image Overlay */}
-      <div 
+      <div
         className="absolute inset-0 opacity-30"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1464207687429-7505649dae38?w=1200&h=600&fit=crop)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1464207687429-7505649dae38?w=1200&h=600&fit=crop)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       ></div>
 
@@ -38,10 +39,15 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
-            Tempo Traveller on Rent
+            Tempo Travellers in Chennai
           </h1>
           <p className="text-xl sm:text-2xl text-blue-100">
-            Book Your Perfect Journey Today
+            Best Deals on Tempo Traveller Rentals | Travel with Comfort & Trust
+          </p>
+          <p className="text-lg text-blue-100 mt-4 max-w-3xl mx-auto">
+            Explore Chennai or go outstation with our premier Tempo Traveller
+            rental services. Professional drivers, comfortable rides, and
+            affordable pricing for your perfect trip.
           </p>
         </div>
 
@@ -55,7 +61,10 @@ export default function Hero() {
                   Pickup Location
                 </label>
                 <div className="relative">
-                  <MapPin className="absolute left-3 top-3 text-white/60" size={20} />
+                  <MapPin
+                    className="absolute left-3 top-3 text-white/60"
+                    size={20}
+                  />
                   <input
                     type="text"
                     name="pickup"
@@ -73,7 +82,10 @@ export default function Hero() {
                   Drop Location
                 </label>
                 <div className="relative">
-                  <MapPin className="absolute left-3 top-3 text-white/60" size={20} />
+                  <MapPin
+                    className="absolute left-3 top-3 text-white/60"
+                    size={20}
+                  />
                   <input
                     type="text"
                     name="dropoff"
@@ -91,7 +103,10 @@ export default function Hero() {
                   Travel Date
                 </label>
                 <div className="relative">
-                  <Calendar className="absolute left-3 top-3 text-white/60" size={20} />
+                  <Calendar
+                    className="absolute left-3 top-3 text-white/60"
+                    size={20}
+                  />
                   <input
                     type="date"
                     name="date"
@@ -108,15 +123,20 @@ export default function Hero() {
                   Travelers
                 </label>
                 <div className="relative">
-                  <Users className="absolute left-3 top-3 text-white/60" size={20} />
+                  <Users
+                    className="absolute left-3 top-3 text-white/60"
+                    size={20}
+                  />
                   <select
                     name="travelers"
                     value={formData.travelers}
                     onChange={handleChange}
                     className="w-full pl-10 pr-4 py-3 bg-white/90 text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
                   >
-                    {[1, 2, 3, 4, 5, 6, 9, 12, 17, 20].map(num => (
-                      <option key={num} value={num}>{num} {num === 1 ? 'Person' : 'People'}</option>
+                    {[1, 2, 3, 4, 5, 6, 9, 12, 17, 20].map((num) => (
+                      <option key={num} value={num}>
+                        {num} {num === 1 ? "Person" : "People"}
+                      </option>
                     ))}
                   </select>
                 </div>
